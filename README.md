@@ -1,4 +1,4 @@
-# Apereo .NET CAS Client Redis backed Proxy/Service Ticket Managers #
+# Redis backed Proxy/Service Ticket Managers for the Apereo .NET CAS Client #
 
 This project is an add-on to the Apereo .NET CAS Client that implements the proxy and service ticket managers backed by a Redis data store.
 

@@ -35,7 +35,7 @@ namespace DotNetCasClient.State
         /// <summary>
         /// This prefix is prepended to CAS Proxy Granting Ticket IOU as the key to the cache.
         /// </summary>
-        private const string CACHE_PGTIOU_KEY_PREFIX = "PGTIOU::";
+        private const string CACHE_PGTIOU_KEY_PREFIX = "PGTIOU:";
 
         private static readonly TimeSpan DefaultExpiration = new TimeSpan(0, 0, 3, 0); // 180 seconds\
 

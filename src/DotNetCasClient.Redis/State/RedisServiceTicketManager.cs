@@ -37,7 +37,7 @@ namespace DotNetCasClient.State
         /// <summary>
         /// This prefix is prepended to CAS Service Ticket as the key to the cache.
         /// </summary>
-        private const string CACHE_TICKET_KEY_PREFIX = "CasTicket::";
+        private const string CACHE_TICKET_KEY_PREFIX = "CasTicket:";
 
         private static readonly Logger SecurityLogger = new Logger(Category.Security);
 

@@ -1,7 +1,3 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-    <!-- Remove DotNetCasClient.Redis appSettings variable -->
-    <appSettings>
-        <add xdt:Transform="Remove" xdt:Locator="Match(key)" key="cas:Redis:ConnectionString" />
-    </appSettings>
 </configuration>

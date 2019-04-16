@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+        <id>DotNetCasClient.Redis</id>
+        <version>$version$</version>
+        <title>$title$</title>
+        <authors>Jason Kanaris</authors>
+        <owners>$owners$</owners>
+        <license type="expression">Apache-2.0</license>
+        <projectUrl>https://github.com/apereo/dotnet-cas-client-redis</projectUrl>
+        <iconUrl>https://avatars2.githubusercontent.com/u/4679233?v=3&amp;s=64</iconUrl>
+        <copyright>$copyright$</copyright>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>$description$</description>
+        <language>en-US</language>
+        <tags>Apereo Jasig CAS Authentication Redis Cache Authn ASP.NET MVC MVC2 MVC3 MVC4 MVC5 WebForms</tags>
+        <dependencies>
+            <group>
+                <dependency id="DotNetCasClient" version="1.3.0" />
+                <dependency id="StackExchange.Redis" version="1.2.6" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\**\DotNetCasClient.Redis.*" target="lib" />
+        <file src="web.config.install.xdt" target="content" />
+        <file src="web.config.transform" target="content" />
+        <file src="web.config.uninstall.xdt" target="content" />
+    </files>
+</package>

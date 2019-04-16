@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+    <PropertyGroup>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <RootNamespace>DotNetCasClient</RootNamespace>
+        <AssemblyName>DotNetCasClient.Redis</AssemblyName>
+        <TargetFrameworks>net45</TargetFrameworks>
+        <OldToolsVersion>2.0</OldToolsVersion>
+        <ProjectGuid>{75080015-BA5A-42B6-BD0B-2586D71FC5B4}</ProjectGuid>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(TargetFramework)'=='net45'">
+        <DefineConstants>NET45</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+        <DefineConstants>TRACE;DEBUG</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+        <DefineConstants>TRACE</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='net45'">
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DotNetCasClient" Version="1.3.0" />
+        <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
+    </ItemGroup>
+</Project>

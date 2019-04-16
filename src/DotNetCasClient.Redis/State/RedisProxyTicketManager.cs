@@ -18,9 +18,6 @@
  */
 
 using System;
-using System.Net;
-using System.Security.Cryptography;
-using System.Text;
 using DotNetCasClient.Utils;
 
 namespace DotNetCasClient.State

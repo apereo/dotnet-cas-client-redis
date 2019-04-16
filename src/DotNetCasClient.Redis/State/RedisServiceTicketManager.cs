@@ -21,9 +21,6 @@ using DotNetCasClient.Logging;
 using DotNetCasClient.Utils;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace DotNetCasClient.State
 {
@@ -34,7 +31,7 @@ namespace DotNetCasClient.State
     /// authentication state can be maintained across multiple servers and recycling of
     /// IIS application pools or server restarts.
     ///</summary>
-    ///<author>Matt Borja, Jason Kanaris</author>
+    ///<author>Jason Kanaris</author>
     public sealed class RedisServiceTicketManager : IServiceTicketManager
     {
         /// <summary>

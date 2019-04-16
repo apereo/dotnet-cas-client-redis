@@ -20,7 +20,7 @@ namespace DotNetCasClient.State
 
         private RedisClientManager()
         {
-            _redis = ConnectionMultiplexer.Connect("localhost");
+            _redis = ConnectionMultiplexer.Connect(ConfigurationManager.AppSettings["cas:Redis:ConnectionString"]);
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace DotNetCasClient.State
         public IDatabase GetDatabase()
 
         {
-            return _redis.GetDatabase(int.Parse(ConfigurationManager.AppSettings["cas:Redis:DatabaseNumber"]));
+            return _redis.GetDatabase();
         }
     }
 }

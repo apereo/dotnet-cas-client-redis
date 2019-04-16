@@ -34,3 +34,9 @@ Set the **proxyTicketManager** attribute value to: `DotNetCasClient.State.RedisP
 Also, don't forget to wire-up the rest of the [.NET Cas Client configuration](https://github.com/apereo/dotnet-cas-client/wiki/Getting-Started#integration-instructions) too.
 
 After all that configuration you should be good to go!
+
+## Notes ##
+
+The proxy and service tickets that are stored in a Redis database have their keys namespaced (see Redis documentation if you are unfamiliar with that concept.)
+
+The namespace for proxy tickets is `CasTicket:PGTIOU` and the namespace for service tickets is `CasTicket:ST`.  Under each of those name spaces you will find the actual keys.

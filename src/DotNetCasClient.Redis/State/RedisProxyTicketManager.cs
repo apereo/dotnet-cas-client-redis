@@ -35,7 +35,7 @@ namespace DotNetCasClient.State
         /// <summary>
         /// This prefix is prepended to CAS Proxy Granting Ticket IOU as the key to the cache.
         /// </summary>
-        private const string CACHE_PGTIOU_KEY_PREFIX = "PGTIOU::";
+        private const string CACHE_PGTIOU_KEY_PREFIX = "CasTicket:PGTIOU:";
 
         private static readonly TimeSpan DefaultExpiration = new TimeSpan(0, 0, 3, 0); // 180 seconds\
 
@@ -76,9 +76,11 @@ namespace DotNetCasClient.State
 
             CommonUtils.AssertNotNullOrEmpty(proxyGrantingTicket, "proxyGrantingTicket parameter cannot be null or empty.");
 
+            var key = GetTicketKey(proxyGrantingTicketIou);
+
             var db = RedisClientManager.Instance.GetDatabase();
 
-            db.StringSet(GetTicketKey(proxyGrantingTicketIou), proxyGrantingTicket,
+            db.StringSet(key, proxyGrantingTicket,
                 DefaultExpiration);
         }
 
@@ -94,9 +96,11 @@ namespace DotNetCasClient.State
         {
             CommonUtils.AssertNotNullOrEmpty(proxyGrantingTicketIou, "proxyGrantingTicketIou parameter cannot be null or empty.");
 
+            var key = GetTicketKey(proxyGrantingTicketIou);
+
             var db = RedisClientManager.Instance.GetDatabase();
 
-            return db.StringGet(GetTicketKey(proxyGrantingTicketIou));
+            return db.StringGet(key);
         }
 
         /// <summary>

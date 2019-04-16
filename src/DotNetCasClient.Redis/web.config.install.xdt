@@ -2,6 +2,7 @@
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
     <!-- Configure default DotNetCasClient.Redis appSettings variable -->
     <appSettings xdt:Transform="InsertIfMissing">
-        <add xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" key="cas:Redis:ConnectionString" value="127.0.0.1,defaultDatabase=0,abortConnect=false" />
+        <add xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" key="cas:Redis:ConnectionString" />
+        <add xdt:Transform="SetAttributes" xdt:Locator="Match(key)" key="cas:Redis:ConnectionString" value="127.0.0.1,defaultDatabase=0,abortConnect=false" />
     </appSettings>
 </configuration>

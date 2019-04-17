@@ -40,3 +40,15 @@ After all that configuration you should be good to go!
 The proxy and service tickets that are stored in a Redis database have their keys namespaced (see Redis documentation if you are unfamiliar with that concept.)
 
 The namespace for proxy tickets is `CasTicket:PGTIOU` and the namespace for service tickets is `CasTicket:ST`.  Under each of those name spaces you will find the actual keys.
+
+## Contributing ##
+
+[![Contributing Guide](https://img.shields.io/badge/Contributing-guide-green.svg?style=flat)](https://apereo.github.io/cas/developer/Contributor-Guidelines.html)
+[![Contributors](https://img.shields.io/github/contributors/apereo/dotnet-cas-client-redis.svg)](https://github.com/apereo/dotnet-cas-client-redis/graphs/contributors)
+[![Open Pull Requests](https://img.shields.io/github/issues-pr/apereo/dotnet-cas-client-redis.svg?style=flat)](https://github.com/apereo/dotnet-cas-client-redis/pulls)
+
+If you have already identified an enhancement or a bug, it is STRONGLY recommended that you simply submit a pull request to address the case. There is no need for special ceremony to create separate issues. The pull request IS the issue and it will be tracked and tagged as such.
+
+This project follows the [GitFlow](https://github.com/nvie/gitflow) branching/workflow model.  As such, please base all of the code changes in your pull request off of the `develop` branch in our repo.  We will merge your pull request, if accepted, into our `develop` branch.
+
+Also take a look at the [Apereo Contributor Guidelines](https://apereo.github.io/cas/developer/Contributor-Guidelines.html) article for an more information about contributing.
